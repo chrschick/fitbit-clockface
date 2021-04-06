@@ -1,0 +1,32 @@
+{
+  "name": "fitbit-clockface",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "~5.0.2",
+    "@fitbit/sdk-cli": "^1.7.3",
+    "fitbit-sdk-types": "^6.0.3",
+    "node-sass": "^5.0.0"
+  },
+  "fitbit": {
+    "appUUID": "282fa529-3640-4f7e-b8eb-eaf09b276515",
+    "appType": "clockface",
+    "appDisplayName": "MyClock",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ffffff",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {},
+    "defaultLanguage": "en-US"
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit",
+    "css": "node-sass app/scss/styles.scss --output-style compressed -o resources/",
+    "watch": "yarn css --watch --recursive"
+  }
+}
